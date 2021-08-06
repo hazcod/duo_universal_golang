@@ -77,21 +77,6 @@ type LocationInfo struct {
 	State   string `json:"state"`
 }
 
-type AccessDeviceInfo struct {
-	Browser             string       `json:"browser"`
-	BrowserVersion      string       `json:"browser_version"`
-	FlashVersion        string       `json:"flash_version"`
-	Hostname            string       `json:"host_name"`
-	Ip                  string       `json:"ip"`
-	IsEncryptionEnabled bool         `json:"is_encryption_enabled"`
-	IsFirewallEnabled   bool         `json:"is_firewall_enabled"`
-	IsPasswordSet       bool         `json:"is_password_set"`
-	JavaVersion         string       `json:"java_version"`
-	Location            LocationInfo `json:"location"`
-	Os                  string       `json:"os"`
-	OsVersion           string       `json:"os_version"`
-}
-
 type AuthDeviceInfo struct {
 	Ip       string       `json:"ip"`
 	Location LocationInfo `json:"location"`
@@ -110,7 +95,6 @@ type UserInfo struct {
 }
 
 type AuthContextInfo struct {
-	AccessDevice AccessDeviceInfo `json:"access_device"`
 	Alias        string           `json:"alias"`
 	Application  ApplicationInfo  `json:"application"`
 	AuthDevice   AuthDeviceInfo   `json:"auth_device"`
